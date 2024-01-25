@@ -1,0 +1,19 @@
+package springmaven;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+
+
+@Controller
+@RequestMapping("/app")
+public class DemoController {
+	
+	@RequestMapping(method = RequestMethod.GET)
+	public @ResponseBody String firstMethod() {
+		return "Welcome to Spring Maven";
+	}
+
+}
